@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>VietLu_Project2</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin=""></script>
+
+</head>
+
+
+<body class="background">
+
+
+
+<div class="header" id="myheader">
+	<div class="inner_header">
+		<div class="logo_container">
+    <a href="Home.html"><img class="logo" src="img/Logo.png" ></a>
+	</div>
+	<ul class="navigation">
+		
+    <a href="Gigs.html"><li>Gigs</li></a>
+    <a href="Page1.html"><li><strong>Venues</strong></li></a>
+    <a href="Profile.html"><li>Profile</li></a>
+    <a href="index.html"><li>Log Out</li></a>
+</ul>
+</div>
+</div>
+
+
+<div id="map" style="width: 100%; height: 800px;"></div>
+<script>
+
+	var mymap = L.map('map').setView([-41.286461, 174.776230], 15);
+
+	L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+		maxZoom: 19,
+		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		id: 'mapbox.streets'
+	}).addTo(mymap);
+
+
+
+var marker = L.marker([-41.286461, 174.776230]).addTo(mymap);
+marker.bindPopup('San Fran').openPopup();
+
+var marker = L.marker([-41.294162, 174.77539]).addTo(mymap);
+marker.bindPopup('San Fran').openPopup();
+
+var marker = L.marker([-41.294817, 174.775354]).addTo(mymap);
+marker.bindPopup('Valhalla').openPopup();
+
+var marker = L.marker([-41.29114, 174.776858]).addTo(mymap);
+marker.bindPopup('Caroline').openPopup();
+
+var marker = L.marker([-41.290669, 174.774872]).addTo(mymap);
+marker.bindPopup('Meow').openPopup();
+
+var marker = L.marker([-41.297235, 174.774272]).addTo(mymap);
+marker.bindPopup('The Third Eye').openPopup();
+
+var marker = L.marker([-41.295154, 174.768734]).addTo(mymap);
+marker.bindPopup('Aro Valley Community Hall').openPopup();
+
+var marker = L.marker([-41.291512, 174.779614]).addTo(mymap);
+marker.bindPopup('Hashigo Zake').openPopup();
+
+var marker = L.marker([-41.292209, 174.777545]).addTo(mymap);
+marker.bindPopup('Eva Beva').openPopup();
+
+var marker = L.marker([-41.288591, 174.77725]).addTo(mymap);
+marker.bindPopup('City Gallery').openPopup();
+
+var marker = L.marker([-41.298122, 174.774025]).addTo(mymap);
+marker.bindPopup('The Fold').openPopup();
+
+var marker = L.marker([-41.311843, 174.779037]).addTo(mymap);
+marker.bindPopup('Monterey').openPopup();
+
+var marker = L.marker([-41.292414, 174.778332]).addTo(mymap);
+marker.bindPopup('Jack Hacketts').openPopup();
+
+var marker = L.marker([-41.288638, 174.769192]).addTo(mymap);
+marker.bindPopup('The Hunter Lounge').openPopup();
+
+
+
+
+// var lg_unit = L.layerGroup([])
+// var overlays = {
+// 	"jazz": lg_unit,
+// 	"blue": lg_local,
+// 		}
+// 	L.control.layers(null, overlays).addTo(map);
+</script>
+
+	
+
+ <div class="header2index">
+ <div class="inner_header">
+  <p> Viet Trieu Lu - Victoria University of Wellington 2019 </p>
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myheader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+
+
+
+</body>
+
+</html>
